@@ -5,9 +5,11 @@
         <td @click="filter()">
           Status
         </td>
-        <td>Title</td>
-        <td>Found By</td>
-        <td>Last Updated</td>
+        <td id="title">
+          Title
+        </td>
+        <td>Reported By</td>
+        <td>Date</td>
       </tr>
       <bug-component v-for="bug in state.bugs" :key="bug._id" :bug="bug">
       </bug-component>
@@ -55,5 +57,8 @@ export default {
     height: 200px;
     width: 200px;
   }
+}
+#title {
+  width: 35vw;
 }
 </style>

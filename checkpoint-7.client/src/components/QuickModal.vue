@@ -22,9 +22,9 @@
         <div class="modal-body">
           <form @submit.prevent="createBug()">
             <input type="text" class="my-2" placeholder="title" v-model="state.newTitle">
-            <input type="text" class="my-2" placeholder="description" v-model="state.newDescription">
+            <textarea rows="3" cols="61" class="my-2" placeholder="description" v-model="state.newDescription" />
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">
                 Close
               </button>
               <button type="submit" class="btn btn-primary">
@@ -66,5 +66,15 @@ export default {
 <style scoped>
 input{
   width: 100%
+}
+.btn-primary {
+  background-color: rgb(143, 143, 197);
+  border: none;
+}
+.btn-primary:hover {
+  background-color: rgb(131, 131, 202);
+}
+.btn-danger {
+  border: none;
 }
 </style>
